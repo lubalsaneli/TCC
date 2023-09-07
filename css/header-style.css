@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;   
+    text-decoration: none;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 82px;
+}
+
+.desktop-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.desktop-menu ul li {
+    margin: 0 15px;
+}
+
+.desktop-menu ul li a {
+    font-size: 1rem;
+    color: black;
+}
+
+.acess ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acess ul a {
+    color: black;
+}
+
+.acess span {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.acess button {
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFC90E;
+    padding: 12px 24px;
+    margin: 0 0 0 1rem;
+    cursor: pointer;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+@media (max-width: 730px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .acess {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        padding: 25px;
+    }
+
+    .mobile-menu li {
+        list-style-type: none;
+        padding: 10px;
+    }
+
+    .nav-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-mobile .style-separator {
+        display: flex;
+        height: 1px;
+        width: 80%;
+        opacity: 40%;
+        background-color: #000000;
+    }
+
+    .nav-mobile a {
+        color: black;
+        width: 80%;
+    }
+
+    .nav-mobile a:hover {
+        background-color: rgba(80,81,83, 0.1);
+        border-radius: 7px;
+    }
+
+    .mobile-menu-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    .mobile-menu-description {
+        width: 70%;
+        line-height: 22.4px;
+        padding: 10px 0 0 0;
+    }
+
+    .open {
+        display: block;
+    }
+
+}
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/header-style.css">
+        <title>Felpudos | Encontre um amigo, salve uma vida</title>
+    </head>
+    <body>
+        
+        <header>
+
+            <nav class="nav-header">
+                <div class="logo">
+                    <a href="inicio.html">
+                        <img src="./img/logo-icon.svg" alt="Logo Felpudos">
+                    </a>
+                </div>
+
+                <div class="desktop-menu">
+                    <ul>
+                        <li class="desktop-menu-item"><a href="inicio.html" id="menu-inicio">Início</a></li>
+                        <li class="desktop-menu-item"><a href="quem-somos.html" id="menu-quem-somos">Quem Somos</a></li>
+                        <li class="desktop-menu-item"><a href="quero-ajudar.html" id="menu-quero-ajudar">Quero Ajudar</a></li>
+                        <li class="desktop-menu-item"><a href="contato.html" id="menu-contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
+                </div>
+
+                <div class="acess">
+                    <ul>
+                        <span><a href="">ENTRAR</a></span>
+                        <a href=""><button>CRIAR CONTA</button></a>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="mobile-menu">
+                <ul>
+                    <li id="mobile-menu-title">Menu</li>
+                    <li>
+                        <nav class="nav-mobile">
+                            <a href="inicio.html">
+                                <div class="mobile-menu-title">Início</div>
+                                <div class="mobile-menu-description">Volte para o início da nossa página.</div>
+                            </a>
+    
+                            <div class="style-separator"></div>
+                            
+                            <a href="quem-somos.html">
+                                <div class="mobile-menu-title">Quem Somos</div>
+                                <div class="mobile-menu-description">Descubra mais sobre nós, nossos objetivos e missão.</div>
+                            </a>
+    
+                            <div class="style-separator"></div>
+    
+                            <a href="quero-ajudar.html">
+                                <div class="mobile-menu-title">Quero Ajudar</div>
+                                <div class="mobile-menu-description">Apoie-nos! Saiba como você pode fazer a diferença.</div>
+                            </a>
+    
+                            <div class="style-separator"></div>
+    
+                            <a href="contato.html">
+                                <div class="mobile-menu-title">Contato</div>
+                                <div class="mobile-menu-description">Estamos aqui para responder às sua perguntas e ouvir seus comentários.</div>
+                            </a>
+    
+                            <div class="style-separator"></div>
+                        </nav>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+
+        <script src="./js/header-script.js"></script>
+
+    </body>
+</html>
