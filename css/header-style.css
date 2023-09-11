@@ -26,6 +26,7 @@
 .desktop-menu ul li a {
     font-size: 1rem;
     color: black;
+    padding: 1px 0;
 }
 
 .acess ul {
@@ -79,7 +80,7 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
-    }
+    }   
 
     .mobile-menu {
         position: absolute;
