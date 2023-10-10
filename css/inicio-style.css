@@ -142,11 +142,11 @@
 }
 
 .our-services {
-    height: 50vh;
+    height: 70vh;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
-    padding: 4em;
+    padding: 1em;
 }
 
 .our-services-menu {
@@ -233,38 +233,6 @@
 #slide-photo4 {
     background-image: url(../img/dog-menu-4.jpg);
 }
-
-footer {
-    background-color: rgba(72, 72, 84, 0.8);
-    height: 50vh;
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-content {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-.footer-content a {
-    color: white;
-}
-
-.footer-content li {
-    list-style: none;
-    padding: 5px;
-}
-
-.footer-nav-shortcut h3 {
-    color: white;
-    padding: 10px 0;
-}
-
 
 
 @media (max-width: 730px) {
