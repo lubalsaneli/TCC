@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&display=swap');
+
+
+/* Estilização Geral */
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização da Main */
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #E6E6E6;
+    display: flex;
+    justify-content: center; /* Centraliza no eixo X */
+    align-items: center; /* Centraliza no eixo Y */
+}
+
+.h1-p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Right-login */
+
+.right-login {
+    width: 40vw; /* Usa 50% dos 100% */
+    height: 90vh;
+    display: flex;
+    justify-content: center; /* Centraliza no eixo X */
+    align-items: center; /* Centraliza no eixo Y */
+}
+
+/* Card-login */
+
+.card-login {
+    background-color: azure;
+    width: 60%; /* A % pega o tamanho referente a div */
+    display: flex;
+    justify-content: center; /* Centraliza no eixo X */
+    align-items: center; /* Centraliza no eixo Y */
+    flex-direction: column;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #030202; /* Para colocar sombra */
+}
+
+.card-login > h1 {
+    color: black;
+    font-weight: 800;
+    font-family: 'Gabarito', cursive;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Textfield */
+
+.textfield {
+    width: 70%;
+    display: flex;
+    flex-direction: column; /* Quando usa o flex-direciton inverte o justify-content e align-items */
+    align-items: flex-start; /* Centraliza no eixo X */
+    justify-content: center; /* Centraliza no eixo Y */
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #e1e48873;
+    color: black;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Gabarito', cursive;
+} 
+
+.textfield > label {
+    color: black;
+    margin-bottom: 10px;
+    font-family: 'Gabarito', cursive;
+}
+
+.textfield > input:placeholder {
+    color: black;
+}
+
+.btn-login {
+    width: 80%;
+    padding: 15px 0px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase; /* Para colocar todas as letras em maiúsculo */
+    letter-spacing: 1px; /* Para colocar espaçamento entre as letras */
+    background: #ffe37d;
+    transition: .2s;
+}
+
+.btn-login:hover {
+    background-color: #ffc800;
+}
+
+p {
+    font-size: 14px;
+    font-family: 'Gabarito', cursive;
+}
+
+/* Criando as medias */
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+    main {
+        flex-direction: column;
+    }
+
+    .left-login {
+        display: none;
+    }
+
+    .right-login {
+        width: 90%;
+    }
+    
+    .card-login { 
+        width: 75%;
+    }
+}
