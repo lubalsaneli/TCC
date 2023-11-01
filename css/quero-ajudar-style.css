@@ -1,3 +1,13 @@
+/* ESTILIZAÇÃO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILIZAÇÃO DO HEADER */
+
 #menu-inicio {
     border-bottom: none;
 }
@@ -12,4 +22,110 @@
 
 #menu-contato {
     border-bottom: none;
+}
+
+/* ESTILIZAÇÃO DA MAIN */
+
+.banner {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    background-image: url(../img/dog-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-text {
+    width: 500px;
+    margin-left: 10%;
+    color: white;
+}
+
+.banner-text h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 1000;
+    font-size: 48px;
+    padding: 10px 0;
+}
+
+/* section-texto-primeiro */
+
+section.section-texto-primeiro {
+    margin-top: 60px;
+    display: flex;
+    padding: 40px 4%;
+    gap: 400px;
+}
+
+.boas-vindas h2, .endereco h2 {
+    margin-bottom: 30px;
+}
+
+.boas-vindas, .endereco {
+    text-align: justify;
+    width: 100%;
+}
+
+.endereco #cidade {
+    color: #000;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+/* section-texto-segundo */
+
+section.section-texto-segundo {
+    padding: 40px 4%;
+}
+
+.como-funciona {
+    width: 50%;
+}
+
+.como-funciona h2 {
+    margin-bottom: 30px;
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex                                                                                                                                                                                                                                                                                                       ;
+}
+
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+} 
+
+.especialidades .especialidade-box {
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .especialidade-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff51;
+}
+
+.especialidades .especialidade-box i {
+    font-size: 70px;
+    color: #FFC90E;
+}
+
+.especialidades .especialidade-box h3 {
+    font-size: 30px;
+    margin: 15px 0;
 }
