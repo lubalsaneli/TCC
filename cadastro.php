@@ -1,3 +1,34 @@
+<?php
+// Inclui o arquivo de conexão com o banco de dados
+require_once "conexao.php";
+
+// Inicializa a variável para armazenar a mensagem de sucesso
+$mensagem = '';
+
+// Verifica se o formulário foi enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Obtém os dados enviados pelo formulário
+  $firstname = $_POST["firstname"];
+  $lastname = $_POST["lastname"];
+  $login = $_POST["login"];
+  $number = $_POST["number"];
+  $data = $_POST["data"];
+  $cpf = $_POST["cpf"];
+  $password = $_POST["password"];
+  $gender = $_POST["gender"];
+
+  // Insere os dados na tabela de produtos
+  $sql = "INSERT INTO usuarios (nome, sobrenome, email, celular, data, cpf, senha, gender) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute([$nome, $sobrenome, $email, $celular, $data, $cpf, $senha, $gender]);
+
+  // Define a mensagem de sucesso
+  $mensagem = 'Usuário cadastrado com sucesso!';
+}
+?>
+
+<!-- site -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,12 +45,17 @@
         <title>Felpudos | Encontre um amigo, salve uma vida</title>
     </head>
     <body>
+        <?php if (!empty($mensagem)) { ?>
+            <script>
+                alert('<?php echo $mensagem; ?>');
+            </script>
+        <?php } ?>
         <div class="container">
             <div class="form-image">
                 <a href="inicio.html"><img src="img/logo-icon.svg" alt=""></a>
             </div>
             <div class="form">
-                <form action="#">
+                <form mathod="POST">
                     <div class="form-header">
                         <div class="title">
                             <h1>Cadastre-se</h1>
@@ -38,7 +74,7 @@
                         </div>
                         <div class="input-box">
                             <label for="email">E-mail</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                            <input id="email" type="email" name="login" placeholder="Digite seu e-mail" required>
                         </div>
     
                         <div class="input-box">

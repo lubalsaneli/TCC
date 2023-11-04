@@ -12,10 +12,10 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtém o login e a senha enviados pelo formulário
   $login = $_POST["login"];
-  $senha = $_POST["senha"];
+  $senha = $_POST["password"];
 
   // Consulta o banco de dados para ver se há um usuário com esse login e senha
-  $resultado = consultarUsuario($pdo, $login, $senha);
+  $resultado = consultarUsuario($pdo, $login, $password);
 
   // Se houver um usuário com esse login e senha, redireciona para a página principal
   if ($resultado) {
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </div>
                         <div class="textfield">
                             <label for="senha">Senha</label>
-                            <input type="password" name="senha" placeholder="Digite sua senha">
+                            <input type="password" name="password" placeholder="Digite sua senha">
                         </div>
                         <button class="btn-login">Login</button>
                         <p>Não possui uma conta? Crie uma <a href="cadastro.html">aqui</a></p>
