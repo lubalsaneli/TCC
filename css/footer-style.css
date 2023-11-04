@@ -1,0 +1,30 @@
+footer {
+    background-color: rgba(72, 72, 84, 0.8);
+    height: 50vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.footer-content a {
+    color: white;
+}
+
+.footer-content li {
+    list-style: none;
+    padding: 5px;
+}
+
+.footer-nav-shortcut h3 {
+    color: white;
+    padding: 10px 0;
+}
