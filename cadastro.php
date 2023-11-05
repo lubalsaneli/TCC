@@ -2,25 +2,27 @@
 // Inclui o arquivo de conexão com o banco de dados
 require_once "conexao.php";
 
+// Inicia a sessão para armazenar as informações do usuário
+session_start();
+
 // Inicializa a variável para armazenar a mensagem de sucesso
 $mensagem = '';
 
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtém os dados enviados pelo formulário
-  $firstname = $_POST["firstname"];
-  $lastname = $_POST["lastname"];
-  $login = $_POST["login"];
-  $number = $_POST["number"];
-  $data = $_POST["data"];
+  $primeironome = $_POST["primeironome"];
+  $sobrenome = $_POST["sobrenome"];
+  $email = $_POST["email"];
+  $celular = $_POST["celular"];
+  $nascimento = $_POST["nascimento"];
   $cpf = $_POST["cpf"];
-  $password = $_POST["password"];
-  $gender = $_POST["gender"];
+  $senha = $_POST["senha"];
 
-  // Insere os dados na tabela de produtos
-  $sql = "INSERT INTO usuarios (nome, sobrenome, email, celular, data, cpf, senha, gender) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+  // Insere os dados na tabela de usuarios
+  $sql = "INSERT INTO usuarios (primeironome, sobrenome, email, celular, nascimento, cpf, senha) VALUES (?, ?, ?, ?, ?, ?, ?)";
   $stmt = $pdo->prepare($sql);
-  $stmt->execute([$nome, $sobrenome, $email, $celular, $data, $cpf, $senha, $gender]);
+  $stmt->execute([$primeironome, $sobrenome, $email, $celular, $nascimento, $cpf, $senha]);
 
   // Define a mensagem de sucesso
   $mensagem = 'Usuário cadastrado com sucesso!';
@@ -30,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- site -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,17 +47,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <title>Felpudos | Encontre um amigo, salve uma vida</title>
     </head>
     <body>
+
+        <!-- Verifica se a mensagem de sucesso está definida e exibe o pop-up com a mensagem -->
         <?php if (!empty($mensagem)) { ?>
             <script>
                 alert('<?php echo $mensagem; ?>');
             </script>
         <?php } ?>
+
         <div class="container">
+
             <div class="form-image">
                 <a href="inicio.html"><img src="img/logo-icon.svg" alt=""></a>
             </div>
+
             <div class="form">
-                <form mathod="POST">
+                <form method="POST">
+
                     <div class="form-header">
                         <div class="title">
                             <h1>Cadastre-se</h1>
@@ -65,26 +73,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="input-group">
                         <div class="input-box">
                             <label for="firstname">Primeiro Nome</label>
-                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome" required>
+                            <input id="firstname" type="text" name="primeironome" placeholder="Digite seu primeiro nome" required>
                         </div>
     
                         <div class="input-box">
                             <label for="lastname">Sobrenome</label>
-                            <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                            <input id="lastname" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
                         </div>
                         <div class="input-box">
                             <label for="email">E-mail</label>
-                            <input id="email" type="email" name="login" placeholder="Digite seu e-mail" required>
+                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
                         </div>
     
                         <div class="input-box">
                             <label for="number">Celular</label>
-                            <input id="number" type="tel" name="number" placeholder="(xx) xxxxx-xxxx" required>
+                            <input id="number" type="tel" name="celular" placeholder="(xx) xxxxx-xxxx" required>
                         </div>
 
                         <div class="input-box">
                             <label for="data">Data de Nascimento</label>
-                            <input id="data" type="date" name="data" placeholder="00/00/0000" required>
+                            <input id="data" type="date" name="nascimento" placeholder="00/00/0000" required>
                         </div>
 
                         <div class="input-box">
@@ -95,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                            <input id="password" type="password" name="senha" placeholder="Digite sua senha" required>
                         </div>
     
                         <div class="input-box">
@@ -129,7 +137,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
     
                     <div class="continue-button">
-                        <button><a href="#">Cadastrar</a> </button>
+                        <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                        <!-- <button><a href="#">Cadastrar</a> </button> -->
                     </div>
                 </form>
             </div>
