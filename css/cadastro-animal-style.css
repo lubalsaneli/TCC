@@ -14,6 +14,10 @@
     border-bottom: 2px solid #FFC90E;
 }
 
+.desktop-menu a {
+    font-family: 'Gabarito', cursive;
+}
+
 /* Main do Site */
 
 .container{

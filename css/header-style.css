@@ -49,10 +49,14 @@
     font-weight: 700;
     border: none;
     border-radius: 5px;
-    background-color: #FFC90E;
+    background-color: #ffe37d;
     padding: 12px 24px;
     margin: 0 0 0 1rem;
     cursor: pointer;
+}
+
+.acess button:hover {
+    background-color: #FFC90E;
 }
 
 .mobile-menu-icon {

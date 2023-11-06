@@ -1,3 +1,7 @@
+<?php
+    include_once "conexao.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -33,8 +37,14 @@
             <div class="mobile-menu-icon">
                 <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
             </div>
-        </nav>
 
+            <div class="acess">
+                <ul>
+                    <a href="./inicio.html"><button>SAIR</button></a>
+                </ul>
+            </div>
+
+        </nav>
 
         <div class="mobile-menu">
             <ul>
@@ -57,12 +67,56 @@
                 </li>
             </ul>
         </div>
+
     </header>
     <main>
-        aaa
+        <div class="container_total_felpudos">
+            <span id="total_felpudos"></span>
+        </div>
+
+        <div class="title-adocao">
+            <h2>Encontre seu Felpudo</h2>
+        </div>
+
+        <section class="filter-container">
+            <form action="">
+                <select name="" id="porte-select" class="box-selection">
+                    <option value="">Selecione o Porte</option>
+                    <option value="">Mini</option>
+                    <option value="">Pequeno</option>
+                    <option value="">Médio</option>
+                    <option value="">Grande</option>
+                    <option value="">Gigante</option>
+                </select>
+            </form>
+
+            <form action="">
+                <select name="" id="sexo-select" class="box-selection">
+                    <option value="">Sexo</option>
+                    <option value="">Fêmea</option>
+                    <option value="">Macho</option>
+                </select>
+            </form>
+
+            <form action="">
+                <select name="" id="especie-select" class="box-selection">
+                    <option value="">Espécie</option>
+                    <option value="">Cachorro</option>
+                    <option value="">Gato</option>
+                </select>
+            </form>
+        </section>
+
+        <!-- ESTLIZAÇÃO DOS CARDS -->
+
+        <section class="felpudos-container">
+        
+        </section>
+
     </main>
 
     
-    <script src="./js/header-script.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/header-script-forphp.js"></script>
 </body>
 </html>

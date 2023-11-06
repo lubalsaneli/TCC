@@ -11,21 +11,21 @@ $mensagem = '';
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtém os dados enviados pelo formulário
-  $primeironome = $_POST["primeironome"];
-  $sobrenome = $_POST["sobrenome"];
-  $email = $_POST["email"];
-  $celular = $_POST["celular"];
-  $nascimento = $_POST["nascimento"];
-  $cpf = $_POST["cpf"];
-  $senha = $_POST["senha"];
+  $nome = $_POST["nome"];
+  $especie = $_POST["especie"];
+  $sexo = $_POST["sexo"];
+  $porte = $_POST["porte"];
+  $raca = $_POST["raca"];
+  $idade = $_POST["idade"];
+  $descricao = $_POST["descricao"];
 
   // Insere os dados na tabela de usuarios
-  $sql = "INSERT INTO usuarios (primeironome, sobrenome, email, celular, nascimento, cpf, senha) VALUES (?, ?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO animais (nome, especie, sexo, porte, raca, idade, descricao) VALUES (?, ?, ?, ?, ?, ?, ?)";
   $stmt = $pdo->prepare($sql);
-  $stmt->execute([$primeironome, $sobrenome, $email, $celular, $nascimento, $cpf, $senha]);
+  $stmt->execute([$nome, $especie, $sexo, $porte, $raca, $idade, $descricao]);
 
   // Define a mensagem de sucesso
-  $mensagem = 'Usuário cadastrado com sucesso!';
+  $mensagem = 'Felpudo cadastrado com sucesso!';
 }
 ?>
 
@@ -49,6 +49,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <title>Felpudos | Encontre um amigo, salve uma vida</title>
     </head>
 <body>
+
+        <!-- Verifica se a mensagem de sucesso está definida e exibe o pop-up com a mensagem -->
+        <?php if (!empty($mensagem)) { ?>
+            <script>
+                alert('<?php echo $mensagem; ?>');
+            </script>
+        <?php } ?>
+
     <header>
         <nav class="nav-header">
             <div class="logo">
@@ -67,8 +75,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="mobile-menu-icon">
                 <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
             </div>
-        </nav>
 
+            <div class="acess">
+                    <ul>
+                        <a href="./inicio.html"><button>SAIR</button></a>
+                    </ul>
+            </div>
+
+        </nav>
 
         <div class="mobile-menu">
             <ul>
@@ -91,9 +105,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </li>
             </ul>
         </div>
+
     </header>
     
     <main>
+
         <div class="container">
             <i class="paw fa fa-paw"></i>
             <div class="wrapper">
@@ -103,22 +119,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span>DOS</span>
                 </div>
                 <div class="bottom">
-                    <form>
+                    <form method="POST">
                         <h3>Cadastro Felpudo</h3>
-                        <input type="text" name="nomeanimal" placeholder="Nome do Animal" required>
-                        <input type="text" name="especieanimal" placeholder="Espécie do Animal" required>
-                        <input type="text" name="sexoanimal" placeholder="Sexo do Animal" required>
+                        <input type="text" name="nome" placeholder="Nome do Animal" required>
+                        <input type="text" name="especie" placeholder="Espécie do Animal" required>
+                        <input type="text" name="sexo" placeholder="Sexo do Animal" required>
                         <div class="form-input">
                             <label for="tipo">Porte do Animal</label>
-                            <select name="tipo" id="tipo" required>
+                            <select name="porte" id="tipo" required>
                                 <option value="">Selecionar</option>
                                 <option value="RAÇÃO PACOTE">Pequeno</option>
                                 <option value="RAÇÃO AGRANEL">Médio</option>
                                 <option value="RAÇÃO AGRANEL">Grande</option>
                             </select>
                         </div>
-                        <input type="text" name="racaanimal" placeholder="Raça do Animal" required>
-                        <input type="text" name="idadeanimal" placeholder="Idade" required>
+                        <input type="text" name="raca" placeholder="Raça do Animal" required>
+                        <input type="text" name="idade" placeholder="Idade" required>
                         <textarea name="descricao" name="descricao" placeholder="Descrição do Animal" id="" cols="20" rows="10"></textarea>
 
                         <div class="singUp">
