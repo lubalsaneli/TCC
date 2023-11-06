@@ -18,6 +18,6 @@ create table animais (ID INT AUTO_INCREMENT PRIMARY KEY,
                         porte varchar(10) NOT NULL,
                         raca varchar(50) NOT NULL,
                         idade int NOT NULL,
-                        descricao varchar(250) NOT NULL,
+                        descricao varchar(250),
                         imagem MEDIUMBLOB,
                         ativo bool);
