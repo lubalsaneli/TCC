@@ -146,7 +146,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <i class="paw fa fa-paw"></i>
         </div>
     </main>
-    
+    <footer>
+            <div class="footer-content">
+                <nav class="footer-nav-shortcut">
+                    <h3>Mapa do Site</h3>
+                    <ul>
+                        <li><a href="../inicio.html">Início</a></li>
+                        <li><a href="../quem-somos.html">Quem Somos</a></li>
+                        <li><a href="../contato.html">Contato</a></li>
+                        <li><a href="../quero-ajudar.html">Quero Ajudar</a></li>
+                    </ul>
+                </nav>
+
+                <nav>
+                    <a href="inicio.html">
+                        <img src="./img/logo-icon-white.svg" alt="Logo Felpudos">
+                    </a>
+                </nav>
+        </footer>
     <script src="./js/header-script.js"></script>
 </body>
 </html>
