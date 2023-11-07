@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
@@ -88,8 +88,25 @@
     outline: 0;
     padding: 10px;
     border-radius: 20px;
-    width: 95%;
-    
+    width: 95%;   
+}
+
+.bottom p {
+    margin-top: 5px;
+    font-family: 'Gabarito', cursive;
+    text-align: center;
+    font-size: 20px;
+}
+
+.genero_animal {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.gender-input label {
+    font-family: 'Gabarito', cursive;
 }
 
 h3 {
@@ -102,6 +119,10 @@ h3 {
 .form-input label {
     font-family: 'Gabarito', cursive;
     font-size: 20px;
+}
+
+.form-input {
+    text-align: center;
 }
 
 .form-input select {

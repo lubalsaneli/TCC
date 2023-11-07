@@ -122,15 +122,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <form method="POST">
                         <h3>Cadastro Felpudo</h3>
                         <input type="text" name="nome" placeholder="Nome do Animal" required>
-                        <input type="text" name="especie" placeholder="Espécie do Animal" required>
-                        <input type="text" name="sexo" placeholder="Sexo do Animal" required>
+                        <div class="form-input">
+                            <label for="tipo">Espécie</label>
+                            <select name="especie" id="tipo" required>
+                                <option value="">Selecionar</option>
+                                <option value="Cachorro">Cachorro</option>
+                                <option value="Gato">Gato</option>
+                            </select>
+                        </div>
+                        <p>Gênero do Animal</p>
+                        <div class="genero_animal">
+                            <div class="gender-input">
+                                <input id="female" type="radio" name="sexo" required>
+                                <label for="female">Fêmea</label>
+                            </div>
+                            <div class="gender-input">
+                                <input id="male" type="radio" name="sexo" required>
+                                <label for="male">Macho</label>
+                            </div>
+                        </div>
+
                         <div class="form-input">
                             <label for="tipo">Porte do Animal</label>
                             <select name="porte" id="tipo" required>
                                 <option value="">Selecionar</option>
-                                <option value="RAÇÃO PACOTE">Pequeno</option>
-                                <option value="RAÇÃO AGRANEL">Médio</option>
-                                <option value="RAÇÃO AGRANEL">Grande</option>
+                                <option value="Pequeno">Pequeno</option>
+                                <option value="Médio">Médio</option>
+                                <option value="Grande">Grande</option>
                             </select>
                         </div>
                         <input type="text" name="raca" placeholder="Raça do Animal" required>
