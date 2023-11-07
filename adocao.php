@@ -1,5 +1,5 @@
 <?php
-    include_once "conexao.php";
+    include_once "conexao.php";  
 ?>
 
 <!DOCTYPE html>
@@ -77,36 +77,6 @@
             <div class="title-adocao">
                 <h2>Encontre seu Felpudo</h2>
             </div>
-
-            <section class="filter-container">
-                <form action="">
-                    <select name="" id="porte-select" class="box-selection">
-                        <option value="">Selecione o Porte</option>
-                        <option value="">Mini</option>
-                        <option value="">Pequeno</option>
-                        <option value="">Médio</option>
-                        <option value="">Grande</option>
-                        <option value="">Gigante</option>
-                    </select>
-                </form>
-
-                <form action="">
-                    <select name="" id="sexo-select" class="box-selection">
-                        <option value="">Sexo</option>
-                        <option value="">Fêmea</option>
-                        <option value="">Macho</option>
-                    </select>
-                </form>
-
-                <form action="">
-                    <select name="" id="especie-select" class="box-selection">
-                        <option value="">Espécie</option>
-                        <option value="">Cachorro</option>
-                        <option value="">Gato</option>
-                    </select>
-                </form>
-            </section>
-
             <!-- ESTLIZAÇÃO DOS CARDS -->
 
             <section class="felpudos-container">
@@ -133,7 +103,6 @@
                     </a>
                 </nav>
         </footer>
-
 
         <script src="./js/custom.js"></script>
         <script src="./js/header-script-forphp.js"></script>

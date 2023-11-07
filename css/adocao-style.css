@@ -29,31 +29,9 @@ main {
 }
 
 .title-adocao h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    padding: 10px 0;
-}
-
-.title-adocao h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    padding: 10px 0;
-}
-
-.filter-container {
-    
-    height: 10vh;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0px 24px;
-}
-
-.box-selection {
-    padding: 10px;
+    font-family: 'Gabarito', cursive;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 #sexo-select, #especie-select {
@@ -64,7 +42,6 @@ main {
     height: 30px;
     width: 100%;
     background-color: #FFC90E;
-
     display: flex;
     align-items: center;
     justify-content: center;
