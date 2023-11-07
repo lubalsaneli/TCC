@@ -77,8 +77,8 @@
             <div class="title-adocao">
                 <h2>Encontre seu Felpudo</h2>
             </div>
+            
             <!-- ESTLIZAÇÃO DOS CARDS -->
-
             <section class="felpudos-container">
             
             </section>

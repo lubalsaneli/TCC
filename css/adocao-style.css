@@ -47,7 +47,6 @@ main {
     justify-content: center;
 }
 
-
 /*Estilização dos CARDS*/
 
 .felpudos-container {
@@ -72,12 +71,9 @@ main {
     height: 70px;
     width: 100%;
     line-height: 45px;
-
     position: absolute;
     bottom: 0;
-
     background-color: #FFFFFF;
-    
     display: flex;
     align-items: center;
     justify-content: center;    
