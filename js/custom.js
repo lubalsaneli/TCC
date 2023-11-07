@@ -1,5 +1,5 @@
 const felpudos_container = document.querySelector(".felpudos-container");
-const total_felpudos = document.querySelector("#total_felpudos")
+const total_felpudos = document.querySelector("#total_felpudos");
 
 const listarAnimais = async () => {
     const dados = await fetch("./list.php");
@@ -17,14 +17,6 @@ const contagemHeader = async () => {
         : total_felpudos.innerHTML = `${respostaQtde} FELPUDOS DISPONÍVEIS`
     
 }
-
-const teste = document.querySelector("#1");
-
-
-function teste() {
-    console.log(teste);
-}
-
 
 listarAnimais();
 contagemHeader();
