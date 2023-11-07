@@ -9,7 +9,7 @@ $result_animais->execute();
 $dados = "";
 while($row_animal = $result_animais->fetch(PDO::FETCH_ASSOC)) {
     extract($row_animal);
-    $dados .= "<a href=adocao-details.php><div class=felpudo-card id=$id><img src=><span>$nome</span></div></a>";
+    $dados .= "<a href=adocao-details.php><div class=felpudo-card id=teste><img src=><span>$nome</span></div></a>";
 }
 
 echo $dados;

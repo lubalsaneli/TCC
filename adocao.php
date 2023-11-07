@@ -70,60 +70,60 @@
 
     </header>
     <main>
-        <div class="container_total_felpudos">
-            <span id="total_felpudos"></span>
-        </div>
+            <div class="container_total_felpudos">
+                <span id="total_felpudos"></span>
+            </div>
 
-        <div class="title-adocao">
-            <h2>Encontre seu Felpudo</h2>
-        </div>
+            <div class="title-adocao">
+                <h2>Encontre seu Felpudo</h2>
+            </div>
 
-        <section class="filter-container">
-            <form action="">
-                <select name="" id="porte-select" class="box-selection">
-                    <option value="">Selecione o Porte</option>
-                    <option value="">Mini</option>
-                    <option value="">Pequeno</option>
-                    <option value="">Médio</option>
-                    <option value="">Grande</option>
-                    <option value="">Gigante</option>
-                </select>
-            </form>
+            <section class="filter-container">
+                <form action="">
+                    <select name="" id="porte-select" class="box-selection">
+                        <option value="">Selecione o Porte</option>
+                        <option value="">Mini</option>
+                        <option value="">Pequeno</option>
+                        <option value="">Médio</option>
+                        <option value="">Grande</option>
+                        <option value="">Gigante</option>
+                    </select>
+                </form>
 
-            <form action="">
-                <select name="" id="sexo-select" class="box-selection">
-                    <option value="">Sexo</option>
-                    <option value="">Fêmea</option>
-                    <option value="">Macho</option>
-                </select>
-            </form>
+                <form action="">
+                    <select name="" id="sexo-select" class="box-selection">
+                        <option value="">Sexo</option>
+                        <option value="">Fêmea</option>
+                        <option value="">Macho</option>
+                    </select>
+                </form>
 
-            <form action="">
-                <select name="" id="especie-select" class="box-selection">
-                    <option value="">Espécie</option>
-                    <option value="">Cachorro</option>
-                    <option value="">Gato</option>
-                </select>
-            </form>
-        </section>
+                <form action="">
+                    <select name="" id="especie-select" class="box-selection">
+                        <option value="">Espécie</option>
+                        <option value="">Cachorro</option>
+                        <option value="">Gato</option>
+                    </select>
+                </form>
+            </section>
 
-        <!-- ESTLIZAÇÃO DOS CARDS -->
+            <!-- ESTLIZAÇÃO DOS CARDS -->
 
-        <section class="felpudos-container">
-        
-        </section>
+            <section class="felpudos-container">
+            
+            </section>
+        </main>
+       
 
-    </main>
-
-    <footer>
+        <footer>
             <div class="footer-content">
                 <nav class="footer-nav-shortcut">
                     <h3>Mapa do Site</h3>
                     <ul>
-                        <li><a href="../inicio.html">Início</a></li>
-                        <li><a href="../quem-somos.html">Quem Somos</a></li>
-                        <li><a href="../contato.html">Contato</a></li>
-                        <li><a href="../quero-ajudar.html">Quero Ajudar</a></li>
+                        <li><a href="./inicio.html">Início</a></li>
+                        <li><a href="./quem-somos.html">Quem Somos</a></li>
+                        <li><a href="./contato.html">Contato</a></li>
+                        <li><a href="./quero-ajudar.html">Quero Ajudar</a></li>
                     </ul>
                 </nav>
 
@@ -135,7 +135,7 @@
         </footer>
 
 
-        <script src="../js/custom.js"></script>
-        <script src="../js/header-script-forphp.js"></script>
+        <script src="./js/custom.js"></script>
+        <script src="./js/header-script-forphp.js"></script>
 </body>
 </html>
