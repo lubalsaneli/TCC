@@ -9,15 +9,15 @@ create table usuarios (ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
                         celular varchar(16) NOT NULL,
                         nascimento date NOT NULL,
                         cpf varchar(15) NOT NULL,
-                        senha varchar(50) NOT NULL);
+                        senha varchar(50) NOT NULL,
+                        gender char(1) NOT NULL);
 
 create table animais (ID INT AUTO_INCREMENT PRIMARY KEY,
                         nome varchar(50) NOT NULL,
                         especie	varchar(10) NOT NULL,
-                        sexo varchar(5) NOT NULL,
+                        sexo char(1) NOT NULL,
                         porte varchar(10) NOT NULL,
                         raca varchar(50) NOT NULL,
                         idade int NOT NULL,
                         descricao varchar(250),
-                        imagem MEDIUMBLOB,
-                        ativo bool);
+                        imagem varchar(50) NOT NULL);

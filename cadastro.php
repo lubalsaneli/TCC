@@ -18,11 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $nascimento = $_POST["nascimento"];
   $cpf = $_POST["cpf"];
   $senha = $_POST["senha"];
+  $gender = $_POST["gender"];
 
   // Insere os dados na tabela de usuarios
-  $sql = "INSERT INTO usuarios (primeironome, sobrenome, email, celular, nascimento, cpf, senha) VALUES (?, ?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO usuarios (primeironome, sobrenome, email, celular, nascimento, cpf, senha, gender) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt = $pdo->prepare($sql);
-  $stmt->execute([$primeironome, $sobrenome, $email, $celular, $nascimento, $cpf, $senha]);
+  $stmt->execute([$primeironome, $sobrenome, $email, $celular, $nascimento, $cpf, $senha, $gender]);
 
   // Define a mensagem de sucesso
   $mensagem = 'Usuário cadastrado com sucesso!';
@@ -120,17 +121,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
                         <div class="gender-group">
                             <div class="gender-input">
-                                <input id="female" type="radio" name="gender" required>
+                                <input id="female" type="radio" name="gender" value="F" required>
                                 <label for="female">Feminino</label>
                             </div>
     
                             <div class="gender-input">
-                                <input id="male" type="radio" name="gender" required>
+                                <input id="male" type="radio" name="gender" value="M" required>
                                 <label for="male">Masculino</label>
                             </div>
 
                             <div class="gender-input">
-                                <input id="none" type="radio" name="gender" required>
+                                <input id="none" type="radio" name="gender" value="I" required>
                                 <label for="none">Prefiro não dizer</label>
                             </div>
                         </div>

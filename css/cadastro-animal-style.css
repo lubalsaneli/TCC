@@ -134,6 +134,10 @@ h3 {
     text-align: center;
 }
 
+.imagem label {
+    display: flex;
+}
+
 .singUp button {
     font-family: 'Gabarito', cursive;
     background: #ffe37d;

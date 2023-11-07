@@ -19,10 +19,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $idade = $_POST["idade"];
   $descricao = $_POST["descricao"];
 
+  if( isset($_FILES["imagem"]) && !empty($_FILES["imagem"]))
+  {
+    $imagem = "./imagem-banco/".$_FILES['imagem']["name"];
+    move_uploaded_file($_FILES["imagem"]["tmp_name"], $imagem);
+  }
+
   // Insere os dados na tabela de usuarios
-  $sql = "INSERT INTO animais (nome, especie, sexo, porte, raca, idade, descricao) VALUES (?, ?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO animais (nome, especie, sexo, porte, raca, idade, descricao, imagem) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt = $pdo->prepare($sql);
-  $stmt->execute([$nome, $especie, $sexo, $porte, $raca, $idade, $descricao]);
+  $stmt->execute([$nome, $especie, $sexo, $porte, $raca, $idade, $descricao, $imagem]);
 
   // Define a mensagem de sucesso
   $mensagem = 'Felpudo cadastrado com sucesso!';
@@ -119,7 +125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span>DOS</span>
                 </div>
                 <div class="bottom">
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data">
                         <h3>Cadastro Felpudo</h3>
                         <input type="text" name="nome" placeholder="Nome do Animal" required>
                         <div class="form-input">
@@ -133,11 +139,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <p>Gênero do Animal</p>
                         <div class="genero_animal">
                             <div class="gender-input">
-                                <input id="female" type="radio" name="sexo" required>
+                                <input id="female" type="radio" name="sexo" value="F" required>
                                 <label for="female">Fêmea</label>
                             </div>
                             <div class="gender-input">
-                                <input id="male" type="radio" name="sexo" required>
+                                <input id="male" type="radio" name="sexo" value="M" required>
                                 <label for="male">Macho</label>
                             </div>
                         </div>
@@ -154,7 +160,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <input type="text" name="raca" placeholder="Raça do Animal" required>
                         <input type="text" name="idade" placeholder="Idade" required>
                         <textarea name="descricao" name="descricao" placeholder="Descrição do Animal" id="" cols="20" rows="10"></textarea>
-
+                        <div class="imagem">
+                            <label>Imagem do Animal</label>
+                            <input type="file" name="imagem" accept="imagem/*">
+                        </div>
                         <div class="singUp">
                             <button>Cadastrar<i class="fa fa-paw"></i></button>
                         </div>
