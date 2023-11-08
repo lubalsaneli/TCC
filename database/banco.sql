@@ -21,3 +21,15 @@ create table animais (ID INT AUTO_INCREMENT PRIMARY KEY,
                         idade int NOT NULL,
                         descricao varchar(250),
                         imagem varchar(50) NOT NULL);
+
+create table consultas (ID INT AUTO_INCREMENT PRIMARY KEY,
+                        nomedono varchar(50) NOT NULL,
+                        email varchar(150) NOT NULL,
+                        celular varchar(16) NOT NULL,
+                        cpf varchar(15) NOT NULL,
+                        raca varchar(20) NOT NULL,
+                        porte varchar(10) NOT NULL,
+                        especie varchar(10),
+                        sexoanimal char(1) NOT NULL,
+                        descricao varchar(250));
+

@@ -11,27 +11,23 @@ $mensagem = '';
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtém os dados enviados pelo formulário
-  $nome = $_POST["nome"];
-  $especie = $_POST["especie"];
-  $sexo = $_POST["sexo"];
-  $porte = $_POST["porte"];
+  $nomedono = $_POST["nomedono"];
+  $email = $_POST["email"];
+  $celular = $_POST["celular"];
+  $cpf = $_POST["cpf"];
   $raca = $_POST["raca"];
-  $idade = $_POST["idade"];
+  $porte = $_POST["porte"];
+  $especie = $_POST["especie"];
+  $sexoanimal = $_POST["sexoanimal"];
   $descricao = $_POST["descricao"];
 
-  if( isset($_FILES["imagem"]) && !empty($_FILES["imagem"]))
-  {
-    $imagem = "./imagem-banco/".$_FILES['imagem']["name"];
-    move_uploaded_file($_FILES["imagem"]["tmp_name"], $imagem);
-  }
-
   // Insere os dados na tabela de usuarios
-  $sql = "INSERT INTO animais (nome, especie, sexo, porte, raca, idade, descricao, imagem) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO consultas (nomedono, email, celular, cpf, raca, porte, especie, sexoanimal, descricao) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt = $pdo->prepare($sql);
-  $stmt->execute([$nome, $especie, $sexo, $porte, $raca, $idade, $descricao, $imagem]);
+  $stmt->execute([$nomedono, $email, $celular, $cpf, $raca, $porte, $especie, $sexoanimal, $descricao]);
 
   // Define a mensagem de sucesso
-  $mensagem = 'Felpudo cadastrado com sucesso!';
+  $mensagem = 'Consulta cadastrada com sucesso!';
 }
 ?>
 
@@ -49,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="./css/header-style.css">
         <link rel="stylesheet" href="./css/inicio-style.css">
         <link rel="stylesheet" href="./css/footer-style.css">
-        <link rel="stylesheet" href="./css/cadastro-animal-style.css">
+        <link rel="stylesheet" href="./css/agendar-consulta.css">
         <link rel="shortcut icon" type="imagex/svg" href="./img/felupudos-shotcut.svg">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <title>Felpudos | Encontre um amigo, salve uma vida</title>
@@ -121,39 +117,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </header>
     
     <main>
-
         <div class="container">
-            <i class="paw fa fa-paw"></i>
-            <div class="wrapper">
-                <div class="top">
-                    <span>FELPU</span>
-                    <img src="./img/dog.webp" alt="">
-                    <span>DOS</span>
-                </div>
-                <div class="bottom">
-                    <form method="POST" enctype="multipart/form-data">
-                        <h3>Cadastro Felpudo</h3>
-                        <input type="text" name="nome" placeholder="Nome do Animal" required>
-                        <div class="form-input">
-                            <label for="tipo">Espécie</label>
-                            <select name="especie" id="tipo" required>
-                                <option value="">Selecionar</option>
-                                <option value="Cachorro">Cachorro</option>
-                                <option value="Gato">Gato</option>
-                            </select>
+            <div class="form">
+                <form method="POST">
+
+                    <div class="form-header">
+                        <div class="title">
+                            <h1>Agendamento de Consulta</h1>
                         </div>
-                        <p>Gênero do Animal</p>
-                        <div class="genero_animal">
-                            <div class="gender-input">
-                                <input id="female" type="radio" name="sexo" value="F" required>
-                                <label for="female">Fêmea</label>
-                            </div>
-                            <div class="gender-input">
-                                <input id="male" type="radio" name="sexo" value="M" required>
-                                <label for="male">Macho</label>
-                            </div>
+                    </div>
+    
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="firstname">Nome do Dono</label>
+                            <input id="firstname" type="text" name="nomedono" placeholder="Digite seu nome" required>
+                        </div>
+    
+                        <div class="input-box">
+                            <label for="lastname">Email</label>
+                            <input id="lastname" type="email" name="email" placeholder="Digite seu email" required>
                         </div>
 
+                        <div class="input-box">
+                            <label for="Celular">Celular</label>
+                            <input id="Celular" type="tel" name="celular" placeholder="(00) 00000-0000" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="cpf">CPF</label>
+                            <input id="cpf" type="text" name="cpf" placeholder="000.000.000-00" required>
+                        </div>
+
+                            
+                        <div class="input-box">
+                            <label for="raca">Raça do Animal</label>
+                            <input id="raca" type="text" name="raca" placeholder="Digite a Raça" required>
+                        </div>
+    
                         <div class="form-input">
                             <label for="tipo">Porte do Animal</label>
                             <select name="porte" id="tipo" required>
@@ -163,22 +163,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <option value="Grande">Grande</option>
                             </select>
                         </div>
-                        <input type="text" name="raca" placeholder="Raça do Animal" required>
-                        <input type="text" name="idade" placeholder="Idade" required>
-                        <textarea name="descricao" name="descricao" placeholder="Descrição do Animal" id="" cols="20" rows="10"></textarea>
-                        <div class="imagem">
-                            <label>Imagem do Animal</label>
-                            <input type="file" name="imagem" accept="imagem/*">
+                        <div class="form-input">
+                            <label for="tipo">Espécie</label>
+                            <select name="especie" id="tipo" required>
+                                <option value="">Selecionar</option>
+                                <option value="Pequeno">Cachorro</option>
+                                <option value="Médio">Gato</option>
+                            </select>
                         </div>
-                        <div class="singUp">
-                            <button>Cadastrar<i class="fa fa-paw"></i></button>
+    
+                    </div>
+    
+                    <div class="gender-inputs">
+                        <div class="gender-title">
+                            <h6>Gênero do Animal</h6>
                         </div>
-                    </form>
-                </div>
-            </div>
-            <i class="paw fa fa-paw"></i>
+                        <div class="gender-group">
+                            <div class="gender-input">
+                                <input id="female" type="radio" name="sexoanimal" value="F" required>
+                                <label for="female">Fêmea</label>
+                            </div>
+                            <div class="gender-input">
+                                <input id="male" type="radio" name="sexoanimal" value="M" required>
+                                <label for="male">Macho</label>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea name="descricao" name="descricao" placeholder="Descrição do que o Animal tem" id="" cols="100" rows="4"></textarea>
+                    
+                    <div class="continue-button">
+                        <button type="submit" class="btn-cadastrar">Cadastrar</button>
+                        <p>Após o agendamento, alguém da nossa equipe ligará para confirmar a consulta.</p>
+                    </div>
+                </form>
         </div>
     </main>
+
     <footer>
             <div class="footer-content">
                 <nav class="footer-nav-shortcut">
