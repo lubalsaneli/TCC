@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+#para-adotar {
+    border-bottom: 2px solid #FFC90E;
+}
+
+#consulta {
+    border-bottom: none;
+}
+
+/* Estilização da Main */
