@@ -1,3 +1,23 @@
+<?php
+// Inclui o arquivo de conexão com o banco de dados
+require_once "conexao.php";
+
+// Verifica se a pesquisa foi submetida
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Obtém o nome e o tipo enviados pelo formulário
+  $nome = $_POST["nome"];
+
+  // Consulta o banco de dados com base nos valores enviados
+  $stmt = $pdo->prepare("SELECT * FROM consultas WHERE nomedono LIKE ?");
+  $stmt->execute(array("%$nome%"));
+  $consultas = $stmt->fetchAll();
+} else {
+  // Se a pesquisa não foi submetida, retorna todos os produtos
+  $stmt = $pdo->prepare("SELECT * FROM consultas");
+  $stmt->execute();
+  $consultas = $stmt->fetchAll();
+}
+?>
 
 
 <!-- site -->
@@ -29,7 +49,7 @@
 
             <div class="desktop-menu">
                 <ul>
-                    <li class="desktop-menu-item"><a href="administrador-adocao.html" id="para-adotar">Adoção</a></li>
+                    <li class="desktop-menu-item"><a href="administrador-adocao.php" id="para-adotar">Adoção</a></li>
                     <li class="desktop-menu-item"><a href="#" id="consulta">Consultas</a></li>
                 </ul>
             </div>
@@ -56,14 +76,12 @@
           <div class="form-input">
             <input type="text" name="nome" placeholder="Nome do dono">
           </div>
-        
           <button type="submit" value="Pesquisar" class="btn-pesquisar">Pesquisar</button>
         </form>
 
         <table>
           <thead>
             <tr>
-              <th>ID</th>
               <th>Nome do Dono</th>
               <th>Email</th>
               <th>Celular</th>
@@ -76,19 +94,19 @@
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($produtos as $produto) { ?>
+            <?php foreach ($consultas as $consulta) { ?>
               <tr>
-                <td><?php echo $produto["ID"]; ?></td>
-                <td><?php echo $produto["email"]; ?></td>
-                <td><?php echo $produto["celular"]; ?></td>
-                <td><?php echo $produto["cpf"]; ?></td>
-                <td><?php echo $produto["raca"]; ?></td>
-                <td><?php echo $produto["porte"]; ?></td>
-                <td><?php echo $produto["especie"]; ?></td>
-                <td><?php echo $produto["sexoanimal"]; ?></td>
-                <td><?php echo $produto["descricao"]; ?></td>
-                <td><a href='alterar.php?id=<?php echo $produto["ID"]; ?>'><button>Alterar</button></a>
-                <a href='remover_produto.php?id=<?php echo $produto["ID"]; ?>'><button>Remover</button></a></td>
+                <td><?php echo $consulta["nomedono"]; ?></td>
+                <td><?php echo $consulta["email"]; ?></td>
+                <td><?php echo $consulta["celular"]; ?></td>
+                <td><?php echo $consulta["cpf"]; ?></td>
+                <td><?php echo $consulta["raca"]; ?></td>
+                <td><?php echo $consulta["porte"]; ?></td>
+                <td><?php echo $consulta["especie"]; ?></td>
+                <td><?php echo $consulta["sexoanimal"]; ?></td>
+                <td><?php echo $consulta["descricao"]; ?></td>
+                <td><div class="btn-container"><a href='alterar-consulta.php?id=<?php echo $consulta["ID"]; ?>'><button class="btn">Alterar</button></a>
+                <a href='remover_consulta.php?id=<?php echo $consulta["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
               </tr>
             <?php } ?>
           </tbody>
