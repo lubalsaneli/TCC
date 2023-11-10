@@ -1,0 +1,106 @@
+
+main {
+    padding: 30px;
+    background-color: #E6E6E6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container-voltar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container-voltar a {
+    color: inherit;
+}
+
+.container-voltar span img {
+    height: 10px;
+}
+
+.container-details {
+    width: 50vw;
+    height: 60vh;
+
+    display: flex;
+}
+
+.container-details img {
+    height: auto;
+    max-width: 100%;
+}
+
+.container-infos {
+    width: 50%;
+    height: auto;
+
+    border: 1px solid black;
+}
+
+.container-infos-title {
+    height:10%;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+}
+
+.container-infos-title h3 {
+    font-size: 28px;
+}
+
+.container-infos-list {
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 10px;
+}
+
+.container-infos-list li {
+    list-style: none;
+}
+
+.container-infos-descri {
+    display: flex;
+    flex-direction: column;
+
+
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+
+}
+
+.container-infos-descri #cont-descri {
+    word-wrap: break-word;
+}
+
+.container-infos-button {
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-infos-button button {
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffe37d;
+    padding: 12px 24px;
+    cursor: pointer;
+    width: 95%;
+}
+
+.container-infos-button button:hover {
+    background-color: #FFC90E;
+}
