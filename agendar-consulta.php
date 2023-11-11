@@ -42,10 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">      
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/header-style.css">
-        <link rel="stylesheet" href="./css/inicio-style.css">
-        <link rel="stylesheet" href="./css/footer-style.css">
         <link rel="stylesheet" href="./css/agendar-consulta.css">
+        <link rel="stylesheet" href="./css/footer-style.css">
+        <link rel="stylesheet" href="./css/header-style.css">
         <link rel="shortcut icon" type="imagex/svg" href="./img/felupudos-shotcut.svg">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <title>Felpudos | Encontre um amigo, salve uma vida</title>
@@ -70,8 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="desktop-menu">
                 <ul>
                     <li class="desktop-menu-item"><a href="./adocao.php" id="para-adotar">Para Adotar</a></li>
-                    <li class="desktop-menu-item"><a href="./cadastro-animal.php" id="cadastrar-felpudo">Cadastrar Felpudo</a></li>
-                    <li class="desktop-menu-item"><a href="./agendar-consulta.php" id="agendar-consulta">Agendar Consulta</a></li>
+                    <li class="desktop-menu-item"><a href="agendar-consulta.php" id="agendamento-consulta">Agendamento de Consulta</a></li>
                 </ul>
             </div>
 
@@ -80,9 +78,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="acess">
-                    <ul>
-                        <a href="./inicio.html"><button>SAIR</button></a>
-                    </ul>
+                <ul>
+                    <a href="./inicio.html"><button>SAIR</button></a>
+                </ul>
             </div>
 
         </nav>

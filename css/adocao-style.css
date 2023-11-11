@@ -7,11 +7,11 @@
 }
 
 #para-adotar {
-    border-bottom: 2px solid #FFC90E;
+    border-bottom: none;
 }
 
-#cadastrar-felpudo {
-    border-bottom: none;
+#agendamento-consulta {
+    border-bottom: 2px solid #FFC90E;
 }
 
 .desktop-menu a {

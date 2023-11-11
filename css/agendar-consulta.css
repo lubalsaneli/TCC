@@ -6,20 +6,16 @@
     font-family: 'Rubik', sans-serif;
 }
 
+.desktop-menu a {
+    font-family: 'Gabarito', cursive;
+}
+
 #para-adotar {
     border-bottom: none;
 }
 
-#cadastrar-felpudo {
-    border-bottom: none;
-}
-
-#agendar-consulta {
+#agendamento-consulta {
     border-bottom: 2px solid #FFC90E;
-}
-
-.desktop-menu a {
-    font-family: 'Gabarito', cursive;
 }
 
 /* Estilização da Main */

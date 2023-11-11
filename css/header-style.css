@@ -13,6 +13,14 @@
     height: 82px;
 }
 
+#para-adotar {
+    border-bottom: none;
+}
+
+#agendamento-consulta {
+    border-bottom: 2px solid #FFC90E;
+}
+
 .desktop-menu ul {
     display: flex;
     justify-content: center;

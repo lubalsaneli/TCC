@@ -8,16 +8,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $nome = $_POST["nome"];
 
   // Consulta o banco de dados com base nos valores enviados
-  $stmt = $pdo->prepare("SELECT * FROM animais WHERE nome LIKE ?");
+  $stmt = $pdo->prepare("SELECT * FROM visitas WHERE nome LIKE ?");
   $stmt->execute(array("%$nome%"));
-  $animais = $stmt->fetchAll();
+  $visitas = $stmt->fetchAll();
 } else {
   // Se a pesquisa não foi submetida, retorna todos os produtos
-  $stmt = $pdo->prepare("SELECT * FROM animais");
+  $stmt = $pdo->prepare("SELECT * FROM visitas");
   $stmt->execute();
-  $animais = $stmt->fetchAll();
+  $visitas = $stmt->fetchAll();
 }
 ?>
+
 
 <!-- site -->
 
@@ -37,7 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <title>Felpudos | Administrador</title>
     </head>
 <body>
-
 
     <header>
         <nav class="nav-header">
@@ -68,14 +68,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </nav>
 
     </header>
-
+    
     <main>
       <div class="container">
-        <h1>Adoção</h1>
+        <h1>Visitas Agendadas</h1>
 
         <form method="POST">
           <div class="form-input">
-            <input type="text" name="nome" placeholder="Nome Felpudo">
+            <input type="text" name="nome" placeholder="Nome do dono">
           </div>
           <button type="submit" value="Pesquisar" class="btn-pesquisar">Pesquisar</button>
         </form>
@@ -83,32 +83,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <table>
           <thead>
             <tr>
-              <th>Nome Felpudo</th>
-              <th>Espécie</th>
-              <th>Sexo</th>
-              <th>Porte</th>
-              <th>Raça</th>
-              <th>Idade</th>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Celular</th>
+              <th>CPF</th>
+              <th>Nome Animal</th>
             </tr>
           </thead>
           <tbody>
-            <?php foreach ($animais as $animal) { ?>
+            <?php foreach ($visitas as $visita) { ?>
               <tr>
-                <td><?php echo $animal["nome"]; ?></td>
-                <td><?php echo $animal["especie"]; ?></td>
-                <td><?php echo $animal["sexo"]; ?></td>
-                <td><?php echo $animal["porte"]; ?></td>
-                <td><?php echo $animal["raca"]; ?></td>
-                <td><?php echo $animal["idade"]; ?></td>
-                <td><div class="btn-container"><a href='alterar-felpudo.php?id=<?php echo $animal["ID"]; ?>'><button class="btn">Alterar</button></a>
-                <a href='remover_felpudo.php?id=<?php echo $animal["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
+                <td><?php echo $visita["nome"]; ?></td>
+                <td><?php echo $visita["email"]; ?></td>
+                <td><?php echo $visita["celular"]; ?></td>
+                <td><?php echo $visita["cpf"]; ?></td>
+                <td><?php echo $visita["nomeanimal"]; ?></td>
+                <td><div class="btn-container"><a href='alterar-consulta.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Alterar</button></a>
+                <a href='remover_consulta.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
               </tr>
             <?php } ?>
           </tbody>
         </table>
       </div>
     </main>
-
 </body>
 </html>
-

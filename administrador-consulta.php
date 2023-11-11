@@ -49,8 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="desktop-menu">
                 <ul>
-                    <li class="desktop-menu-item"><a href="administrador-adocao.php" id="para-adotar">Adoção</a></li>
-                    <li class="desktop-menu-item"><a href="#" id="consulta">Consultas</a></li>
+                  <li class="desktop-menu-item"><a href="administrador-adocao.php" id="para-adotar">Adoção</a></li>
+                  <li class="desktop-menu-item"><a href="administrador-consulta.php" id="consulta">Consultas</a></li>
+                  <li class="desktop-menu-item"><a href="cadastro-animal.php" id="cadastro-felpudo">Cadastramento do Felpudo</a></li>
+                  <li class="desktop-menu-item"><a href="administrador-visita.php" id="agendamento-visita">Agendamento de Visita</a></li>
                 </ul>
             </div>
 
@@ -63,7 +65,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <a href="#"><button>Administrador</button></a>
                     </ul>
             </div>
-
         </nav>
 
     </header>

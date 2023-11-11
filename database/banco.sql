@@ -33,3 +33,9 @@ create table consultas (ID INT AUTO_INCREMENT PRIMARY KEY,
                         sexoanimal char(1) NOT NULL,
                         descricao varchar(250));
 
+create table visitas (ID INT AUTO_INCREMENT PRIMARY KEY,
+                        nome varchar(50) NOT NULL,
+                        email varchar(150) NOT NULL,
+                        celular varchar(16) NOT NULL,
+                        cpf varchar(15) NOT NULL,
+                        nomeanimal varchar(20) NOT NULL);

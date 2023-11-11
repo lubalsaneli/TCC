@@ -64,18 +64,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php } ?>
 
     <header>
-        <nav class="nav-header">
+         <nav class="nav-header">
             <div class="logo">
-                <a href="inicio.html">
+                <a href="#">
                     <img src="./img/logo-icon.svg" alt="Logo Felpudos">
                 </a>
             </div>
 
             <div class="desktop-menu">
                 <ul>
-                    <li class="desktop-menu-item"><a href="./adocao.php" id="para-adotar">Para Adotar</a></li>
-                    <li class="desktop-menu-item"><a href="./cadastro-animal.php" id="cadastrar-felpudo">Cadastrar Felpudo</a></li>
-                    <li class="desktop-menu-item"><a href="./agendar-consulta.php" id="agendar-consulta">Agendar Consulta</a></li>
+                  <li class="desktop-menu-item"><a href="administrador-adocao.php" id="para-adotar">Adoção</a></li>
+                  <li class="desktop-menu-item"><a href="administrador-consulta.php" id="consulta">Consultas</a></li>
+                  <li class="desktop-menu-item"><a href="cadastro-animal.php" id="cadastro-felpudo">Cadastramento do Felpudo</a></li>
+                  <li class="desktop-menu-item"><a href="administrador-visita.php" id="agendamento-visita">Agendamento de Visita</a></li>
                 </ul>
             </div>
 
@@ -85,11 +86,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="acess">
                     <ul>
-                        <a href="./inicio.html"><button>SAIR</button></a>
+                        <a href="#"><button>Administrador</button></a>
                     </ul>
             </div>
-
         </nav>
+
 
         <div class="mobile-menu">
             <ul>

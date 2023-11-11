@@ -48,7 +48,7 @@
                 <div class="desktop-menu">
                     <ul>
                         <li class="desktop-menu-item"><a href="./adocao.php" id="para-adotar">Para Adotar</a></li>
-                        <li class="desktop-menu-item"><a href="./cadastro-animal.php" id="cadastrar-felpudo">Cadastrar Felpudo</a></li>
+                        <li class="desktop-menu-item"><a href="agendar-consulta.php" id="cadastrar-felpudo">Agendamento de Consulta</a></li>
                     </ul>
                 </div>
     
