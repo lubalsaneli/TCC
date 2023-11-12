@@ -6,13 +6,14 @@ require_once "conexao.php";
 require_once "consultar_usuario.php";
 
 // Inicia a sessão para armazenar as informações do usuário
-session_start();
+session_start();    
 
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtém o login e a senha enviados pelo formulário
   $email = $_POST["email"]; 
   $senha = $_POST["password"]; // O 'password' corrensponde ao name do html
+
 
   // Consulta o banco de dados para ver se há um usuário com esse login e senha
   $resultado = consultarUsuario($pdo, $email, $senha);
@@ -21,9 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($resultado) {
     // Armazena o ID do usuário na sessão
     $_SESSION["id_usuario"] = $resultado["id_usuario"];
-    
+
+    $teste= $resultado["id_usuario"];
+
+    echo $teste;
+
     // Redireciona para a página principal
-    header("Location: adocao.php");
+    header("Location: logado.php");
     exit;
   } else {
     // Se não houver um usuário com esse login e senha, exibe uma mensagem de erro

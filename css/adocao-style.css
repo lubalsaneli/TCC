@@ -7,11 +7,12 @@
 }
 
 #para-adotar {
-    border-bottom: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #FFC90E;
 }
 
 #agendamento-consulta {
-    border-bottom: 2px solid #FFC90E;
+    border-bottom: none;
 }
 
 .desktop-menu a {
@@ -23,15 +24,24 @@
 main {
     background-color: #E6E6E6;
 }
+    
 
 .title-adocao {
-    padding: 10px 0px 0px 24px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.title-adocao p {
+    font-size: 1.10rem;
+    width: 700px;
+    color: #696969;
 }
 
 .title-adocao h2 {
     font-family: 'Gabarito', cursive;
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 5px;
 }
 
 #sexo-select, #especie-select {

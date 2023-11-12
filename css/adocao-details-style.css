@@ -40,7 +40,7 @@ main {
     width: 50%;
     height: auto;
 
-    border: 1px solid black;
+    border: 1px solid #6d6d76   ;
 }
 
 .container-infos-title {
