@@ -1,6 +1,6 @@
 <?php
 // Inclui o arquivo de conexão com o banco de dados
-require_once "conexao.php";
+require_once "./src/conexao.php";
 
 // Verifica se a pesquisa foi submetida
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <td><?php echo $animal["raca"]; ?></td>
                 <td><?php echo $animal["idade"]; ?></td>
                 <td><div class="btn-container"><a href='alterar-felpudo.php?id=<?php echo $animal["ID"]; ?>'><button class="btn">Alterar</button></a>
-                <a href='remover_felpudo.php?id=<?php echo $animal["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
+                <a href='./src/remover_felpudo.php?id=<?php echo $animal["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
               </tr>
             <?php } ?>
           </tbody>

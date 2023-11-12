@@ -1,5 +1,5 @@
 <?php
-    include_once "conexao.php";
+    include_once "./src/conexao.php";
 
     session_start();
     ob_start();

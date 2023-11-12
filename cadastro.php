@@ -1,6 +1,6 @@
 <?php
 // Inclui o arquivo de conexão com o banco de dados
-require_once "conexao.php";
+require_once "./src/conexao.php";
 
 // Inicia a sessão para armazenar as informações do usuário
 session_start();

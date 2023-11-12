@@ -15,7 +15,7 @@
     <title>Felpudos | Encontre um amigo, salve uma vida</title>
 </head>
 <body>
-    <?php require_once "./components/header.html"; ?>
+    <?php require_once "./html/header.html"; ?>
     <main>
         <div class="banner">
             <div class="banner-text">
@@ -90,6 +90,6 @@
             <div class="image-config" id="slide-photo4"></div>
         </section>
     </main>
-    <?php require_once "./components/footer.html"; ?>
+    <?php require_once "./html/footer.html"; ?>
 </body>
 </html>

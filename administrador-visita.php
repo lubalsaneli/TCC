@@ -1,6 +1,6 @@
 <?php
 // Inclui o arquivo de conexão com o banco de dados
-require_once "conexao.php";
+require_once "./src/conexao.php";
 
 // Verifica se a pesquisa foi submetida
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <td><?php echo $visita["cpf"]; ?></td>
                 <td><?php echo $visita["nomeanimal"]; ?></td>
                 <td><div class="btn-container"><a href='alterar-consulta.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Alterar</button></a>
-                <a href='remover_consulta.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
+                <a href='./src/remover_consulta.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
               </tr>
             <?php } ?>
           </tbody>

@@ -1,9 +1,9 @@
 <?php
 // Inclui o arquivo de conexão com o banco de dados
-require_once "conexao.php";
+require_once "./src/conexao.php";
 
 // Inclui o arquivo de consulta ao banco de dados
-require_once "consultar_usuario.php";
+require_once "./src/consultar_usuario.php";
 
 // Inicia a sessão para armazenar as informações do usuário
 session_start();

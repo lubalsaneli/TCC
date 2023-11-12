@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,31 +11,11 @@
     <link rel="stylesheet" href="./css/inicio-style.css">
     <link rel="stylesheet" href="./css/footer-style.css">
     <script src="./js/header-script.js"></script>
-    <link rel="shortcut icon" type="imagex/svg" href="./img/felupudos-shotcut.svg">
+    <link rel="shortcut icon" type="imagex/svg" href="./img/paw-icon.svg">
     <title>Felpudos | Encontre um amigo, salve uma vida</title>
 </head>
 <body>
-    <header>
-        <nav class="nav-header">
-            <div class="logo">
-                <a href="./inicio"><img src="./img/logo-icon.svg" alt="Logo Felpudos"></a>
-            </div>
-            <div class="desktop-menu">
-                <ul>
-                    <li class="desktop-menu-item"><a href="./adocao" id="para-adotar">Para Adotar</a></li>
-                    <li class="desktop-menu-item"><a href="agendar-consulta" id="agendamento-consulta">Agendamento de Consulta</a></li>
-                </ul>
-            </div>
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
-            </div>
-            <div class="acess">
-                <ul>
-                    <a href="./"><button>SAIR</button></a>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <?php include_once "./html/header copy.html"; ?>
     <main>
         <section class="tela-inicio-content">
             <div class="div1">
@@ -52,6 +32,6 @@
             </div>
         </section>
     </main>
-    <?php require_once "./components/footer.html"; ?>
+    <?php require_once "./html/footer.html"; ?>
 </body>
 </html>

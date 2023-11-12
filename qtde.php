@@ -1,6 +1,6 @@
 <?php
 
-include_once "conexao.php";
+include_once "./src/conexao.php";
 
 $query_animais = "SELECT id, nome, idade, porte FROM animais";
 $result_animais = $pdo->prepare($query_animais);
