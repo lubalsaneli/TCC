@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="./css/inicio-style.css">
         <link rel="stylesheet" href="./css/footer-style.css">
         <link rel="stylesheet" href="./css/cadastro-animal-style.css">
-        <link rel="shortcut icon" type="imagex/svg" href="./img/felupudos-shotcut.svg">
+        <link rel="shortcut icon" type="imagex/svg" href="./img/felpudos-shortcut.svg">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <title>Felpudos | Encontre um amigo, salve uma vida</title>
     </head>
@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
             </div>
 
-            <div class="acess">
+            <div class="desktop-access">
                     <ul>
                         <a href="#"><button>Administrador</button></a>
                     </ul>

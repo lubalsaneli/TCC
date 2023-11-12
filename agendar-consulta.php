@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link rel="stylesheet" href="./css/agendar-consulta.css">
         <link rel="stylesheet" href="./css/footer-style.css">
         <link rel="stylesheet" href="./css/header-style.css">
-        <link rel="shortcut icon" type="imagex/svg" href="./img/felupudos-shotcut.svg">
+        <link rel="shortcut icon" type="imagex/svg" href="./img/felpudos-shortcut.svg">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <title>Felpudos | Encontre um amigo, salve uma vida</title>
     </head>
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
             </div>
 
-            <div class="acess">
+            <div class="desktop-access">
                 <ul>
                     <a href="./inicio.html"><button>SAIR</button></a>
                 </ul>

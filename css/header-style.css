@@ -37,22 +37,22 @@
     padding: 1px 0;
 }
 
-.acess ul {
+.desktop-access {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.acess ul a {
+.desktop-access a {
     color: black;
 }
 
-.acess span {
+.desktop-access span {
     font-size: 0.75rem;
     font-weight: 700;
 }
 
-.acess button {
+.desktop-access button {
     font-size: 0.75rem;
     font-weight: 700;
     border: none;
@@ -63,7 +63,7 @@
     cursor: pointer;
 }
 
-.acess button:hover {
+.desktop-access button:hover {
     background-color: #FFC90E;
 }
 
@@ -80,7 +80,7 @@
         display: none;
     }
 
-    .acess {
+    .desktop-access {
         display: none;
     }
 

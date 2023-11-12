@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/header-style.css">
         <link rel="stylesheet" href="./css/administrador-consulta.css">
-        <link rel="shortcut icon" type="imagex/svg" href="./img/felupudos-shotcut.svg">
+        <link rel="shortcut icon" type="imagex/svg" href="./img/felpudos-shortcut.svg">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <title>Felpudos | Administrador</title>
     </head>
@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
             </div>
 
-            <div class="acess">
+            <div class="desktop-access">
                     <ul>
                         <a href="#"><button>Administrador</button></a>
                     </ul>

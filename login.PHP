@@ -6,12 +6,12 @@ require_once "conexao.php";
 require_once "consultar_usuario.php";
 
 // Inicia a sessão para armazenar as informações do usuário
-session_start();    
+session_start();
 
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Obtém o login e a senha enviados pelo formulário
-  $email = $_POST["email"]; 
+  $email = $_POST["email"];
   $senha = $_POST["password"]; // O 'password' corrensponde ao name do html
 
 
@@ -40,57 +40,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- SITE -->
 
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/header-style.css">
-        <link rel="stylesheet" href="./css/inicio-style.css">
-        <link rel="stylesheet" href="./css/login-style.css">
-        <link rel="shortcut icon" type="imagex/svg" href="./img/paw-icon.svg">
-        <title>Felpudos | Encontre um amigo, salve uma vida</title>
-    </head>
-    <body>
-
-        <?php if (isset($erro)) { ?>
-            <script>
-                alert("<?php echo $erro; ?>");
-                document.getElementById("login-form").reset();
-            </script>
-        <?php } ?>
-
-        <main>
-            <nav class="nav-header">
-                <div class="logo">
-                    <a href="inicio.html">
-                        <img src="./img/logo-icon.svg" alt="Logo Felpudos">
-                    </a>
-                </div>
-            </nav>
-
-            <form method="POST" id="login-form">
-                <div class="right-login">
-                    <div class="card-login">
-                        <h1>Login</h1>
-                        <p class="h1-p">Entre com suas informações para acessar o painel do tutor</p>
-                        <div class="textfield">
-                            <label for="usuario">Email</label>
-                            <input type="text" name="email" placeholder="Digite seu Email">
-                        </div>
-                        <div class="textfield">
-                            <label for="senha">Senha</label>
-                            <input type="password" name="password" placeholder="Digite sua senha">
-                        </div>
-                        <button class="btn-login">Login</button>
-                        <p>Não possui uma conta? Crie uma <a href="cadastro.php">aqui</a></p>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header-style.css">
+    <link rel="stylesheet" href="./css/inicio-style.css">
+    <link rel="stylesheet" href="./css/login-style.css">
+    <link rel="shortcut icon" type="imagex/svg" href="./img/paw-icon.svg">
+    <title>Felpudos | Encontre um amigo, salve uma vida</title>
+</head>
+<body>
+    <?php
+    if (isset($erro)) { ?>
+        <script>
+            alert("<?php echo $erro; ?>");
+            document.getElementById("login-form").reset();
+        </script>
+    <?php }
+    ?>
+    <main>
+        <nav class="nav-header">
+            <div class="logo">
+                <a href="./"><img src="./img/logo-icon.svg" alt="Logo Felpudos"></a>
+            </div>
+        </nav>
+        <form method="POST" id="login-form">
+            <div class="right-login">
+                <div class="card-login">
+                    <h1>Login</h1>
+                    <p class="h1-p">Entre com suas informações para acessar o painel do tutor</p>
+                    <div class="textfield">
+                        <label for="usuario">Email</label>
+                        <input type="text" name="email" placeholder="Digite seu Email">
                     </div>
+                    <div class="textfield">
+                        <label for="senha">Senha</label>
+                        <input type="password" name="password" placeholder="Digite sua senha">
+                    </div>
+                    <button class="btn-login">Login</button>
+                    <p>Não possui uma conta? Crie uma <a href="./cadastro">aqui</a>!</p>
                 </div>
-            </form>
-
-        </main>
-    </body>
+            </div>
+        </form>
+    </main>
+</body>
 </html>
