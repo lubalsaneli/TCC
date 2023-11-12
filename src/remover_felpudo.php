@@ -1,7 +1,7 @@
 <?php
 
 // Inclui o arquivo de conexão com o banco de dados
-require_once "conexao.php";
+require_once "./conexao.php";
 
 // Verifica se foi enviado um ID para a página
 if(isset($_GET["id"])) {

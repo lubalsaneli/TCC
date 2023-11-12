@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <header>
+        <nav class="nav-header">
+            <div class="logo">
+                <a href="./administrador-cadastro"><img src="./img/logo-icon.svg" alt="Logo Felpudos"></a>
+            </div>
+            <div class="desktop-menu">
+                <ul>
+                    <li class="desktop-menu-item"><a href="./administrador-cadastro" id="cadastro-felpudo">Cadastro</a></li>
+                    <li class="desktop-menu-item"><a href="./administrador-adocao" id="para-adotar">Para adotar</a></li>
+                    <li class="desktop-menu-item"><a href="./administrador-consulta" id="consulta">Consultas</a></li>
+                    <li class="desktop-menu-item"><a href="./administrador-visita" id="agendamento-visita">Agendamentos</a></li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
+            </div>
+            <div class="desktop-access">
+                <ul>
+                    <a href="#"><button disabled>Administrador</button></a>
+                </ul>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li id="mobile-menu-title">Menu</li>
+                <li>
+                    <nav class="nav-mobile">
+                        <a href="./administrador-cadastro">
+                            <div class="mobile-menu-title">Cadastrar Felpudo</div>
+                            <div class="mobile-menu-description">Faça o Cadastro do animalzinho para adoção.</div>
+                        </a>
+                        <div class="style-separator"></div>
+                        <a href="./administrador-adocao">
+                            <div class="mobile-menu-title">Para Adotar</div>
+                            <div class="mobile-menu-description">Animais disponível para adoção.</div>
+                        </a>
+                        <div class="style-separator"></div>
+                        <a href="./administrador-consulta">
+                            <div class="mobile-menu-title">Agendar Consulta</div>
+                            <div class="mobile-menu-description">Faça o agendamento de consulta.</div>
+                        <div class="style-separator"></div>
+                        <a href="./administrador-visitas">
+                            <div class="mobile-menu-title">Agendar Visitas</div>
+                            <div class="mobile-menu-description">Faça o agendamento de consulta.</div>
+                        </a>
+                    </nav>
+                </li>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
