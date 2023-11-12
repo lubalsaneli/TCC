@@ -126,7 +126,7 @@
                             </div>
 
                             <div class=container-infos-button> 
-                                <button>AGENDAR VISITA</button>
+                                <a href='agendar-visita.php'><button>Agendar Visita</button></a>
                             </div>
                         </div>
 

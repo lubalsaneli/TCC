@@ -38,4 +38,5 @@ create table visitas (ID INT AUTO_INCREMENT PRIMARY KEY,
                         email varchar(150) NOT NULL,
                         celular varchar(16) NOT NULL,
                         cpf varchar(15) NOT NULL,
-                        nomeanimal varchar(20) NOT NULL);
+                        nomeanimal varchar(20) NOT NULL,
+                        datavisita date NOT NULL);

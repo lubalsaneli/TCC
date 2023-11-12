@@ -88,6 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <th>Celular</th>
               <th>CPF</th>
               <th>Nome Animal</th>
+              <th>Data</th>
             </tr>
           </thead>
           <tbody>
@@ -98,8 +99,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <td><?php echo $visita["celular"]; ?></td>
                 <td><?php echo $visita["cpf"]; ?></td>
                 <td><?php echo $visita["nomeanimal"]; ?></td>
-                <td><div class="btn-container"><a href='alterar-consulta.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Alterar</button></a>
-                <a href='./src/remover_consulta.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
+                <td><?php echo $visita["datavisita"]; ?></td>
+                <td><div class="btn-container"><a href='alterar-visita.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Alterar</button></a>
+                <a href='./src/remover_visita.php?id=<?php echo $visita["ID"]; ?>'><button class="btn">Remover</button></a></div></td>
               </tr>
             <?php } ?>
           </tbody>

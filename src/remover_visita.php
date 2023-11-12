@@ -9,16 +9,16 @@ if(isset($_GET["id"])) {
   $id = $_GET["id"];
 
   // Exclui o registro da tabela "produtos"
-  $stmt = $pdo->prepare("DELETE FROM animais WHERE id = ?");
+  $stmt = $pdo->prepare("DELETE FROM visitas WHERE id = ?");
   if($stmt->execute(array($id))) {
     // Redireciona de volta para a página de listagem de produtos
-    header("Location: ../administrador-adocao.php");
+    header("Location: ../administrador-visita.php");
     exit();
   } else {
     echo "Erro ao excluir registro: " . mysqli_error($conexao);
   }
 } else {
   // Se não foi enviado um ID, redireciona para a página de listagem de produtos
-  header("Location: ../administrador-adocao.php");
+  header("Location: ../administrador-visita.php");
   exit();
 }
