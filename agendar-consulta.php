@@ -97,9 +97,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         <div class="style-separator"></div>
                         
-                        <a href="./cadastro-animal.php">
+                        <a href="./administrador-cadastro.php">
                             <div class="mobile-menu-title">Cadastrar Felpudo</div>
-                            <div class="mobile-menu-description">Faça o cadastramento do animalzinho para adoção.</div>
+                            <div class="mobile-menu-description">Faça o Cadastro do animalzinho para adoção.</div>
                         </a>
 
                         <a href="./agendar-consulta.php">

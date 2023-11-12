@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/header-style.css">
-    <link rel="stylesheet" href="./css/inicio-style.css">
+    <link rel="stylesheet" href="./css/index-style.css">
     <link rel="stylesheet" href="css/cadastro-style.css">
     <link rel="shortcut icon" type="imagex/svg" href="./img/paw-icon.svg">
     <title>Felpudos | Encontre um amigo, salve uma vida</title>

@@ -47,11 +47,11 @@
     font-family: 'Gabarito', cursive;
 }
 
-.top span:first-child{
+.top span{
     color:#1F2A32;
 }
 
-.top span:last-child{
+.top span span{
     color:#FFC90E;
 }
 

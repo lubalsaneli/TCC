@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $teste;
 
     // Redireciona para a página principal
-    header("Location: logado.php");
+    header("Location: inicio");
     exit;
   } else {
     // Se não houver um usuário com esse login e senha, exibe uma mensagem de erro
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/header-style.css">
-    <link rel="stylesheet" href="./css/inicio-style.css">
+    <link rel="stylesheet" href="./css/index-style.css">
     <link rel="stylesheet" href="./css/login-style.css">
     <link rel="shortcut icon" type="imagex/svg" href="./img/paw-icon.svg">
     <title>Felpudos | Encontre um amigo, salve uma vida</title>

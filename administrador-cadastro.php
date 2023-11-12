@@ -38,98 +38,86 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- site -->
 
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">      
-        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/header-style.css">
-        <link rel="stylesheet" href="./css/inicio-style.css">
-        <link rel="stylesheet" href="./css/footer-style.css">
-        <link rel="stylesheet" href="./css/cadastro-animal-style.css">
-        <link rel="shortcut icon" type="imagex/svg" href="./img/felpudos-shortcut.svg">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <title>Felpudos | Encontre um amigo, salve uma vida</title>
-    </head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/header-style.css">
+    <link rel="stylesheet" href="./css/index-style.css">
+    <link rel="stylesheet" href="./css/footer-style.css">
+    <link rel="stylesheet" href="./css/administrador-cadastro-style.css">
+    <link rel="shortcut icon" type="imagex/svg" href="./img/paw-icon.svg">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Felpudos | Encontre um amigo, salve uma vida</title>
+</head>
 <body>
-
-        <!-- Verifica se a mensagem de sucesso está definida e exibe o pop-up com a mensagem -->
-        <?php if (!empty($mensagem)) { ?>
-            <script>
-                alert('<?php echo $mensagem; ?>');
-            </script>
-        <?php } ?>
-
+    <?php if (!empty($mensagem)) { ?>
+        <script>
+            alert('<?php echo $mensagem; ?>');
+        </script>
+    <?php } ?>
     <header>
-         <nav class="nav-header">
+        <nav class="nav-header">
             <div class="logo">
-                <a href="#">
-                    <img src="./img/logo-icon.svg" alt="Logo Felpudos">
-                </a>
+                <a href="./administrador-adocao"><img src="./img/logo-icon.svg" alt="Logo Felpudos"></a>
             </div>
-
             <div class="desktop-menu">
                 <ul>
-                  <li class="desktop-menu-item"><a href="administrador-adocao.php" id="para-adotar">Adoção</a></li>
-                  <li class="desktop-menu-item"><a href="administrador-consulta.php" id="consulta">Consultas</a></li>
-                  <li class="desktop-menu-item"><a href="cadastro-animal.php" id="cadastro-felpudo">Cadastramento do Felpudo</a></li>
-                  <li class="desktop-menu-item"><a href="administrador-visita.php" id="agendamento-visita">Agendamento de Visita</a></li>
+                    <li class="desktop-menu-item"><a href="./administrador-cadastro" id="cadastro-felpudo">Cadastro</a></li>
+                    <li class="desktop-menu-item"><a href="./administrador-adocao" id="para-adotar">Para adotar</a></li>
+                    <li class="desktop-menu-item"><a href="./administrador-consulta" id="consulta">Consultas</a></li>
+                    <li class="desktop-menu-item"><a href="./administrador-visita" id="agendamento-visita">Agendamentos</a></li>
                 </ul>
             </div>
-
             <div class="mobile-menu-icon">
                 <button onclick="menuShow()"><img src="./img/menu-icon.svg" alt="Menu" class="icon"></button>
             </div>
-
             <div class="desktop-access">
-                    <ul>
-                        <a href="#"><button>Administrador</button></a>
-                    </ul>
+                <ul>
+                    <a href="#"><button disabled>Administrador</button></a>
+                </ul>
             </div>
         </nav>
-
-
         <div class="mobile-menu">
             <ul>
                 <li id="mobile-menu-title">Menu</li>
                 <li>
                     <nav class="nav-mobile">
-                        <a href="./adocao.php">
+                        <a href="./administrador-cadastro">
+                            <div class="mobile-menu-title">Cadastrar Felpudo</div>
+                            <div class="mobile-menu-description">Faça o Cadastro do animalzinho para adoção.</div>
+                        </a>
+                        <div class="style-separator"></div>
+                        <a href="./administrador-adocao">
                             <div class="mobile-menu-title">Para Adotar</div>
                             <div class="mobile-menu-description">Animais disponível para adoção.</div>
                         </a>
-
                         <div class="style-separator"></div>
-                        
-                        <a href="./cadastro-animal.php">
-                            <div class="mobile-menu-title">Cadastrar Felpudo</div>
-                            <div class="mobile-menu-description">Faça o cadastramento do animalzinho para adoção.</div>
-                        </a>
-
-                        <a href="./agendar-consulta.php">
+                        <a href="./administrador-consulta">
                             <div class="mobile-menu-title">Agendar Consulta</div>
                             <div class="mobile-menu-description">Faça o agendamento de consulta.</div>
+                        <div class="style-separator"></div>
+                        <a href="./administrador-visitas">
+                            <div class="mobile-menu-title">Agendar Visitas</div>
+                            <div class="mobile-menu-description">Faça o agendamento de consulta.</div>
                         </a>
-
                     </nav>
                 </li>
             </ul>
         </div>
-
     </header>
-    
     <main>
-
         <div class="container">
             <i class="paw fa fa-paw"></i>
             <div class="wrapper">
                 <div class="top">
                     <span>FELPU</span>
                     <img src="./img/dog.webp" alt="">
-                    <span>DOS</span>
+                    <span>D<span>❤</span>S</span>
                 </div>
                 <div class="bottom">
                     <form method="POST" enctype="multipart/form-data">
@@ -180,24 +168,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <i class="paw fa fa-paw"></i>
         </div>
     </main>
-    <footer>
-            <div class="footer-content">
-                <nav class="footer-nav-shortcut">
-                    <h3>Mapa do Site</h3>
-                    <ul>
-                        <li><a href="../inicio.html">Início</a></li>
-                        <li><a href="../quem-somos.html">Quem Somos</a></li>
-                        <li><a href="../contato.html">Contato</a></li>
-                        <li><a href="../quero-ajudar.html">Quero Ajudar</a></li>
-                    </ul>
-                </nav>
-
-                <nav>
-                    <a href="inicio.html">
-                        <img src="./img/logo-icon-white.svg" alt="Logo Felpudos">
-                    </a>
-                </nav>
-        </footer>
-    <script src="./js/header-script.js"></script>
 </body>
 </html>

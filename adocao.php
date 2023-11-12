@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">      
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/header-style.css">
-        <link rel="stylesheet" href="./css/inicio-style.css">
+        <link rel="stylesheet" href="./css/index-style.css">
         <link rel="stylesheet" href="./css/footer-style.css">
         <link rel="stylesheet" href="./css/adocao-style.css">
         <link rel="shortcut icon" type="imagex/svg" href="./img/felpudos-shortcut.svg">
@@ -58,9 +58,9 @@
 
                         <div class="style-separator"></div>
                         
-                        <a href="./cadastro-animal.php">
+                        <a href="./administrador-cadastro.php">
                             <div class="mobile-menu-title">Cadastrar Felpudo</div>
-                            <div class="mobile-menu-description">Faça o cadastramento do animalzinho para adoção.</div>
+                            <div class="mobile-menu-description">Faça o Cadastro do animalzinho para adoção.</div>
                         </a>
 
                     </nav>
