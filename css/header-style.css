@@ -13,6 +13,14 @@
     height: 82px;
 }
 
+#para-adotar {
+    border-bottom: none;
+}
+
+#agendamento-consulta {
+    border-bottom: 2px solid #FFC90E;
+}
+
 .desktop-menu ul {
     display: flex;
     justify-content: center;
@@ -29,30 +37,34 @@
     padding: 1px 0;
 }
 
-.acess ul {
+.desktop-access {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.acess ul a {
+.desktop-access a {
     color: black;
 }
 
-.acess span {
+.desktop-access span {
     font-size: 0.75rem;
     font-weight: 700;
 }
 
-.acess button {
+.desktop-access button {
     font-size: 0.75rem;
     font-weight: 700;
     border: none;
     border-radius: 5px;
-    background-color: #FFC90E;
+    background-color: #ffe37d;
     padding: 12px 24px;
     margin: 0 0 0 1rem;
     cursor: pointer;
+}
+
+.desktop-access button:hover {
+    background-color: #FFC90E;
 }
 
 .mobile-menu-icon {
@@ -68,7 +80,7 @@
         display: none;
     }
 
-    .acess {
+    .desktop-access {
         display: none;
     }
 
